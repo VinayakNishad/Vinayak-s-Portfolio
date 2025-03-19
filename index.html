@@ -14,22 +14,31 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#internship">Internship</a></li>
-            <li><a href="#archievement">Archievement</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="banner">
+            <img id="logo" src="images/logo-removebg-preview.png" width="50px" height="50px">
+            <p id="logo-name">VINAYAK NISHAD</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#archievement">Archievement</a></li>
+                <li><a href="./slider_1/index.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="hero" id="home">
         <img src="images/me.png" alt="Vinayak Nishad's Photo" width="180px">
         <h1>Vinayak Nishad</h1>
         <p>Software Developer | UI/UX Designer | MCA Student</p>
+        <div class="hero-button">
+            <a href="#">Resume</a>
+        </div>
     </div>
     <div class="section" id="about">
         <h2>About</h2>
@@ -123,14 +132,77 @@
             </div>
         </div>
     </div>
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <!-- HTML -->
+            <div class="skill">
+                <box-icon name='html5' type='logo' color='#E44D26' size="lg"></box-icon>
+                <span>HTML</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill">
+                <box-icon name='css3' type='logo' color='#1572B6' size="lg"></box-icon>
+                <span>CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill">
+                <box-icon name='javascript' type='logo' color='#F7DF1E' size="lg"></box-icon>
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <!-- PHP -->
+            <div class="skill">
+                <box-icon name='php' type='logo' color='#4F5B93' size="lg"></box-icon>
+                <span>PHP</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+            </div>
+
+            <!-- Firebase -->
+            <div class="skill">
+                <box-icon name='firebase' type='logo' color='#FFCA28' size="lg"></box-icon>
+                <span>Firebase</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <!-- Flutter -->
+            <div class="skill">
+                <box-icon name='flutter' type='logo' color='#02569B' size="lg"></box-icon>
+                <span>Flutter</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <div class="section" id="projects">
+
+    <!-- <div class="section" id="projects">
         <h2>Projects</h2>
         <div class="cards">
             <div class="card">
                 <h3>Campus Connect</h3>
-                <p>An app to manage college events using Flutter and Firebase.</p>
+                <p><strong>Front-end : </strong> Flutter(dart) </p>
+                <p><strong>Back-end : </strong> FIREBASE </p>
+                <p>An app to manage college events using Flutter and Firebase. The main objective is to reduce the paper
+                    work and help students to participate and get informatioon about the college event. The app also
+                    generate's certificate.</p>
             </div>
             <div class="card">
                 <h3>Aqua Adventure</h3>
@@ -150,7 +222,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <div class="section" id="archievement">
         <h2>Archievement</h2>
@@ -172,7 +244,7 @@
 
         </div>
     </div>
-    <div class="section" id="archievement">
+    <div class="section" id="contact">
         <h2>Contact Me</h2>
         <div class="contact">
             <form>
@@ -185,26 +257,33 @@
     </div>
 
     <footer>
-        
-        <div class="social-media">
-            <div class="dm">
-                <box-icon name='github' type='logo' color='#ffffff'></box-icon>
-                <p style="font-size: 9px;">Github</p>
+
+        <div class="footer-contant">
+            <div class="social-media">
+                <div class="dm">
+                    <box-icon name='github' type='logo' color='#ffffff'></box-icon>
+                    <p style="font-size: 9px;">Github</p>
+                </div>
+                <div class="dm">
+                    <box-icon name='linkedin' type='logo' color='#ffffff'></box-icon>
+                    <p style="font-size: 9px;">Linkedin</p>
+                </div>
+                <div class="dm">
+                    <box-icon name='figma' type='logo' color='#ffffff'></box-icon>
+                    <p style="font-size: 9px;">Figma</p>
+                </div>
+                <div class="dm">
+                    <box-icon name='whatsapp' type='logo' color='#ffffff'></box-icon>
+                    <p style="font-size: 9px;">Whatsapp</p>
+                </div>
             </div>
-            <div class="dm">
-                <box-icon name='linkedin' type='logo' color='#ffffff'></box-icon>
-                <p style="font-size: 9px;">Linkedin</p>
-            </div>
-            <div class="dm">
-                <box-icon name='figma' type='logo' color='#ffffff'></box-icon>
-                <p style="font-size: 9px;">Figma</p>
-            </div>
-            <div class="dm">
-                <box-icon name='whatsapp' type='logo' color='#ffffff'></box-icon>
-                <p style="font-size: 9px;">Whatsapp</p>
+            <div class="footer1">
+                <p><a style="font-size: 14px;text-decoration: none;color: white;margin: 0;"
+                        href="mailto:vn07244@gmail.com">send mail : vn07244@gmail.com</a></p>
+                <p style="font-size: 14px;color: white;margin: 0;">Contact :<small>+91 | 7558397994</small></p>
             </div>
         </div>
-        <p style="font-size: 14px;margin: 20px;">2025 Vinayak Nishad. All rights reserved.</p>
+        <p style="font-size: 14px; margin: 30px;">2025 Vinayak Nishad. All rights reserved.</p>
     </footer>
 </body>
 

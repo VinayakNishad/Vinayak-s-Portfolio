@@ -1,0 +1,18 @@
+.internship-container{
+    background-image: url("");
+    padding: 20px;
+    margin: 10px;
+    animation: internship-container both;
+    animation-timeline: view(40% 0%);
+}
+@keyframes internship-container {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    
+}
