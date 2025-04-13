@@ -37,7 +37,7 @@
         <h1>Vinayak Nishad</h1>
         <p>Software Developer | UI/UX Designer | MCA Student</p>
         <div class="hero-button">
-            <a href="#">Resume</a>
+            <a href="./vinayak's resume.pdf" download="Vinayak_Resume.pdf">Resume</a>
         </div>
     </div>
     <div class="section" id="about">
@@ -62,52 +62,36 @@
         <h2>Education</h2>
         <div class="cards">
             <div class="card">
-                <h3>Gurudas Gauns High School</h3>
-                <strong>2008- 2018</strong>
-                <p>Gurudas Gauns High School in Sanquelim, Goa, is renowned for its academic excellence and holistic
-                    education approach, nurturing students for success in various fields.
-
-                    It offers a comprehensive range of subjects including mathematics, science, languages (such as
-                    English, Konkani, and Hindi), social studies, and physical education</p>
+                <img src="./images/school.jpeg" alt="high school"/>
+                <h3>Gurudas Gauns High School, Sanquelim Goa</h3>
+                <p>2008- 2018</p>
+                <p>High School</p>
             </div>
             <div class="card">
-                <h3>Government Higher Secondary School, Sanquelim</h3>
-                <strong>2019 - 2021</strong>
-                <p>Government Higher Secondary School in Sanquelim, Goa, was established in the year 1972.
-
-                    It offers a wide array of subjects including mathematics, physics, chemistry, biology, languages
-                    (such as English, Konkani, and Hindi), geography, history, economics, and computer science.</p>
+                <img src="./images/higher-secondary.jpg" alt="high school"/>
+                <h3>Government Higher Secondary School, Sanquelim Goa</h3>
+                <p>2019 - 2021</p>
+                <p>Higher Secondary</p>
             </div>
             <div class="card">
+                <img src="./images/college.jpg" alt="high school"/>
                 <h3>Government College of Arts, Science and Commerce, Sanquelim, Goa.</h3>
-                <strong>2021- 2024</strong>
-                <p>Established in 1988 as a government pilot project in Goa's hinterlands, the college aims to
-                    provide
-                    quality higher education. Over 24 years, it has consistently produced outstanding graduates,
-                    contributing significantly to Goa's educational landscape.</p>
+                <p>2021- 2024</p>
+                <p>Graduation in BSC Computer Science</p>
+                
             </div>
             <div class="card">
+                <img src="./images/tata.jpeg" alt="high school"/>
                 <h3>Tata STRIVE Skill Development Centre</h3>
-
-                <strong>UI | UX Design</strong>
                 <p> 2024</p>
-                <p>The UI/UX Design course at TATA STRIVE, Ponda Goa, teaches the fundamentals of user interface design,
-                    user experience principles, and design tools like Figma. It covers wireframing,
-                    prototyping, and conducting user research. The course emphasizes responsive design and collaboration
-                    with developers.
-                </p>
+                <p>UI | UX Design</p>
+                
             </div>
             <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Goa_Business_School.jpg/330px-Goa_Business_School.jpg" alt="high school"/>
                 <h3>Goa Bussiness School</h3>
-
-                <strong>Master Of Computer Application</strong>
+                <p>Master Of Computer Application</p>
                 <p>2024-2026</p>
-                <p>The MCA program at Goa University, Taleigao Goa, is a two-year post-graduation course focused on
-                    developing advanced skills in computer applications. It covers topics like programming, database
-                    management, software engineering, and networking. The course includes practical experience through
-                    projects and internships. It prepares students for careers in software development, IT management,
-                    and research.
-                </p>
             </div>
         </div>
     </div>
@@ -247,36 +231,61 @@
     <div class="section" id="contact">
         <h2>Contact Me</h2>
         <div class="contact">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+            <form onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
     </div>
-
+    
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault(); // prevent form from submitting normally
+    
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+    
+            const fullMessage = `Hello, I'm ${name} (%0AEmail: ${email})%0A%0A${message}`;
+            const phoneNumber = "917558397994"; // Replace with your WhatsApp number
+    
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+    
     <footer>
 
         <div class="footer-contant">
             <div class="social-media">
-                <div class="dm">
-                    <box-icon name='github' type='logo' color='#ffffff'></box-icon>
-                    <p style="font-size: 9px;">Github</p>
-                </div>
-                <div class="dm">
-                    <box-icon name='linkedin' type='logo' color='#ffffff'></box-icon>
-                    <p style="font-size: 9px;">Linkedin</p>
-                </div>
-                <div class="dm">
-                    <box-icon name='figma' type='logo' color='#ffffff'></box-icon>
-                    <p style="font-size: 9px;">Figma</p>
-                </div>
-                <div class="dm">
-                    <box-icon name='whatsapp' type='logo' color='#ffffff'></box-icon>
-                    <p style="font-size: 9px;">Whatsapp</p>
-                </div>
+                <a href="https://github.com/VinayakNishad" target="_blank">
+                    <div class="dm">
+                        <box-icon name='github' type='logo' color='#ffffff'></box-icon>
+                        <p style="font-size: 9px;">Github</p>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/vinayak-nishad-bb5400301" target="_blank">
+                    <div class="dm">
+                        <box-icon name='linkedin' type='logo' color='#ffffff'></box-icon>
+                        <p style="font-size: 9px;">Linkedin</p>
+                    </div>
+                </a>
+                <a href="https://www.figma.com/@yourprofile" target="_blank">
+                    <div class="dm">
+                        <box-icon name='figma' type='logo' color='#ffffff'></box-icon>
+                        <p style="font-size: 9px;">Figma</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/yourphonenumber" target="_blank">
+                    <div class="dm">
+                        <box-icon name='whatsapp' type='logo' color='#ffffff'></box-icon>
+                        <p style="font-size: 9px;">Whatsapp</p>
+                    </div>
+                </a>
             </div>
+            
             <div class="footer1">
                 <p><a style="font-size: 14px;text-decoration: none;color: white;margin: 0;"
                         href="mailto:vn07244@gmail.com">send mail : vn07244@gmail.com</a></p>
